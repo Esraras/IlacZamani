@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Giriş sayfası</string>
+    <string name="name">Ad Soyad</string>
+    <string name="mail">Email</string>
+    <string name="password">Şifre</string>
+    <string name="signIn">Kayıt Ol</string>
+    <string name="userName">Kullanıcı adınız</string>
+    <string name="ConfirmPass">Şifre tekrar</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Cinsiyet : </string>
+    <string name="logIn">Giriş Yap</string>
+</resources>
