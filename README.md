@@ -1,0 +1,2 @@
+# RecipeDemo 
+# Project for AppGallery.
