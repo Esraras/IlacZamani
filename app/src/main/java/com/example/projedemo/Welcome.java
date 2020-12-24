@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.huawei.agconnect.auth.AGConnectAuth;
+import com.huawei.hms.hwid.I;
 
 public class Welcome extends AppCompatActivity implements View.OnClickListener {
 
@@ -21,11 +22,23 @@ public class Welcome extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState, persistentState);
 
         out =  (Button) findViewById(R.id.bt_out);
+        out.setOnClickListener(this);
         add =  (Button) findViewById(R.id.bt_add);
+        add.setOnClickListener(this::onClickAdd);
+    }
+
+    private void onClickAdd(View view) {
+
+        Intent intent = new Intent(getApplicationContext(), Properties.class);
+        startActivity(intent);
+
     }
 
     @Override
     public void onClick(View v) {
+
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
 
     }
 }

@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 huaweiAccount = authHuaweiIdTask.getResult();
                 loginDesc.setText(huaweiAccount.getDisplayName());
                 loginButton.setText(R.string.logout);
-                Intent intent = new Intent(getApplicationContext(), Welcome.class);
-                startActivity(intent);
+              /*  Intent intent = new Intent(getApplicationContext(), Welcome.class);
+                startActivity(intent);*/
 
 
             } else {
