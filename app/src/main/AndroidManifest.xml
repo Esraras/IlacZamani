@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjeDemo">
-        <activity android:name=".MedicineAdd"></activity>
+        <activity android:name=".Repeat"></activity>
+        <activity android:name=".Sounds" />
+        <activity android:name=".MedicineAdd" />
         <activity android:name=".Properties" />
         <activity
             android:name=".MainActivity"
