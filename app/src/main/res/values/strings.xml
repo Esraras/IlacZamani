@@ -12,4 +12,6 @@
     <string name="next">İLERİ</string>
     <string name="addNew">Yeni Kişi Ekle</string>
     <string name="add2">Ekle</string>
+    <string name="medicine">İlaç ismi</string>
+    <string name="repeat">Tekrar</string>
 </resources>

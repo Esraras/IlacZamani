@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("ResourceType")
     public void setHuaweiAccount(AuthHuaweiId huaweiAccount) {
         this.huaweiAccount = huaweiAccount;
-
     }
 
     @Override
@@ -60,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
                             Log.i("TAG", "signOut complete");
                             loginButton.setText(R.string.logIn);
+                            loginDesc.setText(R.string.please_login);
                             huaweiAccount = null;
                         }
                     });
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 huaweiAccount = authHuaweiIdTask.getResult();
                 loginDesc.setText(huaweiAccount.getDisplayName());
                 loginButton.setText(R.string.logout);
-              /*  Intent intent = new Intent(getApplicationContext(), Welcome.class);
+              /*Intent intent = new Intent(getApplicationContext(), Welcome.class);
                 startActivity(intent);*/
 
 
