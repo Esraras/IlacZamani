@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Properties"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/background">
+
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="118dp"
+        android:textColor="@color/blue"
+        android:layout_marginTop="100dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="@string/age"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/blue"
+            android:gravity="center"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txt_weight"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="@string/weight"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/blue"
+            android:gravity="center"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txt_height"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="@string/height"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/blue"
+            android:gravity="center"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txt_gen"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="20dp"
+            android:textColor="@color/blue"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Kadın"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Erkek"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_add"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="@string/add2"
+            android:textSize="18dp"
+            android:textColor="@color/blue"
+            android:backgroundTint="#2196F3"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"/>
+
+</LinearLayout>

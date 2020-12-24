@@ -4,6 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp">
+    android:padding="30dp"
+    android:background="@color/background">
+
+
+    <Button
+        android:id="@+id/bt_add"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#2196F3"
+        android:text="@string/add"
+        android:textSize="20dp"
+        android:textColor="@color/blue"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="65dp"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="250dp">
+
+        <Button
+            android:id="@+id/bt_out"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:textColor="@color/blue"
+            android:backgroundTint="#2196F3"/>
+
+    </FrameLayout>
+
 
 </FrameLayout>

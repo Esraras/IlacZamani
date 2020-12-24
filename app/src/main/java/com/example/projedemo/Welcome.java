@@ -14,11 +14,14 @@ import com.huawei.agconnect.auth.AGConnectAuth;
 
 public class Welcome extends AppCompatActivity implements View.OnClickListener {
 
-    Button singUp;
+    Button out, add;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
+
+        out =  (Button) findViewById(R.id.bt_out);
+        add =  (Button) findViewById(R.id.bt_add);
     }
 
     @Override
