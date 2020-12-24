@@ -57,10 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     signOutTask.addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(Task<Void> task) {
-                            // Processing after the sign-out.
+
                             Log.i("TAG", "signOut complete");
                             loginButton.setText(R.string.logIn);
-                            loginDesc.setText(R.string.please_login);
                             huaweiAccount = null;
                         }
                     });
@@ -71,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        // Process the authorization result to obtain an ID token from AuthHuaweiId.
+
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1123) {
 
@@ -80,8 +79,11 @@ public class MainActivity extends AppCompatActivity {
             if (authHuaweiIdTask.isSuccessful()) {
 
                 huaweiAccount = authHuaweiIdTask.getResult();
-                loginDesc.setText(huaweiAccount.getEmail());
+                loginDesc.setText(huaweiAccount.getDisplayName());
                 loginButton.setText(R.string.logout);
+                Intent intent = new Intent(getApplicationContext(), Welcome.class);
+                startActivity(intent);
+
 
             } else {
                 Log.e("TAG", "sign in failed : " +((ApiException)authHuaweiIdTask.getException()).getStatusCode());
