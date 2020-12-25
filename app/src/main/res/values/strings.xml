@@ -14,4 +14,11 @@
     <string name="add2">Ekle</string>
     <string name="medicine">İlaç ismi</string>
     <string name="repeat">Tekrar</string>
+    <string name="monday">Her Pazartesi</string>
+    <string name="tuesday">Her Salı</string>
+    <string name="wednesday">Her Çarşamba</string>
+    <string name="thursday">Her Perşembe</string>
+    <string name="friday">Her Cuma</string>
+    <string name="sat">Her Cumartesi</string>
+    <string name="sun">Her Pazar</string>
 </resources>
