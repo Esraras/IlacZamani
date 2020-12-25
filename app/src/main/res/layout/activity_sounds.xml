@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sounds">
+    tools:context=".Sounds"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Switch
+        android:id="@+id/sw11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Annoying"
+        android:textSize="25dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textOff="OFF"
+        android:textOn="ON"/>
+
+    <Switch
+        android:id="@+id/sw22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daniel simion"
+        android:textSize="25dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textOff="OFF"
+        android:textOn="ON"/>
+
+    <Switch
+        android:id="@+id/sw33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Door bell"
+        android:textSize="25dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textOff="OFF"
+        android:textOn="ON"/>
+
+    <Switch
+        android:id="@+id/sw44"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="School bell"
+        android:textSize="25dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textOff="OFF"
+        android:textOn="ON"/>
+    <Switch
+        android:id="@+id/sw55"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Railroad crossing bell"
+        android:textSize="25dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textOff="OFF"
+        android:textOn="ON"/>
+
+</LinearLayout>
