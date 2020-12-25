@@ -24,22 +24,20 @@ public class Welcome extends AppCompatActivity implements View.OnClickListener {
         out =  (Button) findViewById(R.id.bt_out);
         out.setOnClickListener(this);
         add =  (Button) findViewById(R.id.bt_add);
-        add.setOnClickListener(this::onClickAdd);
+        add.setOnClickListener(this);
     }
-
-    private void onClickAdd(View view) {
-
-        Intent intent = new Intent(getApplicationContext(), Properties.class);
-        startActivity(intent);
-
-    }
-
     @Override
     public void onClick(View v) {
-
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-
+        switch (v.getId()) {
+            case R.id.bt_add: {
+                Intent intent = new Intent(getApplicationContext(), Properties.class);
+                startActivity(intent);
+            }
+            case R.id.bt_out: {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        }
     }
 }
 
