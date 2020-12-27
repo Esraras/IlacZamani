@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
                             Log.i("TAG", "signOut complete");
                             loginButton.setText(R.string.logIn);
-                            loginDesc.setText(R.string.please_login);
                             huaweiAccount = null;
                         }
                     });
@@ -77,14 +76,9 @@ public class MainActivity extends AppCompatActivity {
             Task<AuthHuaweiId> authHuaweiIdTask = HuaweiIdAuthManager.parseAuthResultFromIntent(data);
 
             if (authHuaweiIdTask.isSuccessful()) {
-
                 huaweiAccount = authHuaweiIdTask.getResult();
-                loginDesc.setText(huaweiAccount.getDisplayName());
-                loginButton.setText(R.string.logout);
-              /*Intent intent = new Intent(getApplicationContext(), Welcome.class);
-                startActivity(intent);*/
-
-
+                Intent intent = new Intent(getApplicationContext(), Properties.class);
+                startActivity(intent);
             } else {
                 Log.e("TAG", "sign in failed : " +((ApiException)authHuaweiIdTask.getException()).getStatusCode());
             }

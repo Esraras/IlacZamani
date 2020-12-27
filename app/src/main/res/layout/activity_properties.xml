@@ -10,34 +10,25 @@
     android:background="@color/background">
 
 
-    <TextView
-        android:id="@+id/txt_name"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="118dp"
-        android:textColor="@color/blue"
-        android:layout_marginTop="100dp"/>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_name"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="100dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#C1E1E1"
-            android:hint="@string/name" />
+            android:hint="@string/name"
+            android:textColor="@color/blue"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <TextView
             android:id="@+id/age"
@@ -125,7 +116,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Kadın"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/rb_man"
@@ -133,7 +125,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Erkek"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:onClick="onRadioButtonClicked"/>
 
     </LinearLayout>
 
