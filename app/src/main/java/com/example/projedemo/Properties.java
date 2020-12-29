@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class Properties extends AppCompatActivity implements View.OnClickListene
     TextInputLayout weight;
     TextInputLayout height;
     Button add;
+    RadioGroup radioGroup;
     RadioButton woman, man;
 
     @Override
@@ -44,19 +46,44 @@ public class Properties extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-    /*       TextInputEditText ed = (TextInputEditText) findViewById(R.id.til_age);
-        String ed_text = ed.getText().toString().trim();
-     if (isNumeric(ed_text)) {
 
-            Toast.makeText(this, "dogru", Toast.LENGTH_SHORT).show();
-        }else
-            Toast.makeText(this, "yanlis", Toast.LENGTH_SHORT).show();
-*/
-        if (isValidName(name.getEditText().toString())) {
+        if (ifs() == true ){
+
+            Intent intent = new Intent(getApplicationContext(), Sounds.class);
+            startActivity(intent);
+
             Toast.makeText(this, "Kişi başarıyla eklendi.", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Lütfen geçerli bir ad giriniz.", Toast.LENGTH_SHORT).show();
-        }
+
+        }else
+            Toast.makeText(this, "Lütfen bilgilerinizi eksiksiz ve doğru doldurunuz.", Toast.LENGTH_SHORT).show();
+    }
+
+    public boolean ifs(){
+
+        radioGroup = findViewById(R.id.gender);
+        int selectedID = radioGroup.getCheckedRadioButtonId();
+        add = findViewById(selectedID);
+
+        String ed_text = age.getEditText().getText().toString().trim();
+        if (isNumeric(ed_text)) {
+
+        }else
+            return false;
+        String ed_text1 = weight.getEditText().getText().toString().trim();
+        if (isNumeric(ed_text1)) {
+
+        }else
+            return false;
+        String ed_text2 = height.getEditText().getText().toString().trim();
+        if (isNumeric(ed_text2)) {
+
+        }else
+            return false;
+        if (isValidName(name.getEditText().getText().toString())) {
+
+        }else
+            return false;
+        return true;
     }
 
     private static boolean isNumeric(String strNum){
@@ -70,22 +97,7 @@ public class Properties extends AppCompatActivity implements View.OnClickListene
         return true;
     }
 
-    private boolean isValidName(String name){
+    private static boolean isValidName(String name){
         return name.length() >= 3 && name.length() <= 20;
-    }
-
-    public void onRadioButtonClicked(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.rb_man:
-                if (checked)
-
-                    break;
-            case R.id.rb_woman:
-                if (checked)
-
-                     break;
-        }
     }
 }

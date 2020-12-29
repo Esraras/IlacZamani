@@ -109,24 +109,38 @@
             android:text="@string/gender"
             android:textSize="20dp"
             android:textColor="@color/blue"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/rb_woman"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Kadın"
-            android:textColor="@color/black"
-            android:onClick="onRadioButtonClicked"/>
+                <RadioButton
+                    android:id="@+id/rb_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Kadın"
+                    android:textColor="@color/black"
+                    android:checked="true"/>
 
-        <RadioButton
-            android:id="@+id/rb_man"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Erkek"
-            android:textColor="@color/black"
-            android:onClick="onRadioButtonClicked"/>
+                <RadioButton
+                    android:id="@+id/rb_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Erkek"
+                    android:textColor="@color/black"
+                    android:checked="true"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
