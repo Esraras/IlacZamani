@@ -22,21 +22,15 @@ public class FragmentAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        Fragment fragment;
+
         switch (position){
-            case 0: {
-                fragment = Custom.newInstance(section.get(position));
-                break;
-            }
             case 1: {
-                fragment = Once.newInstance(section.get(position));
-                break;
+                return Once.newInstance(section.get(position));
             }
             default:{
-                fragment = Custom.newInstance(section.get(position));
+                return Custom.newInstance(section.get(position));
             }
         }
-        return fragment;
     }
 
     @Override
