@@ -59,7 +59,6 @@ public class Properties extends AppCompatActivity implements View.OnClickListene
     }
 
     public boolean ifs(){
-
         radioGroup = findViewById(R.id.gender);
         int selectedID = radioGroup.getCheckedRadioButtonId();
         add = findViewById(selectedID);

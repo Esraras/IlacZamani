@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (authHuaweiIdTask.isSuccessful()) {
                 huaweiAccount = authHuaweiIdTask.getResult();
-                Intent intent = new Intent(getApplicationContext(), MedicineAdd.class);
+                Intent intent = new Intent(getApplicationContext(), Properties.class);
                 startActivity(intent);
             } else {
                 Log.e("TAG", "sign in failed : " +((ApiException)authHuaweiIdTask.getException()).getStatusCode());
