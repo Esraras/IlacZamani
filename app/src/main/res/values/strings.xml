@@ -3,15 +3,12 @@
     <string name="name">Ad Soyad</string>
     <string name="add">KİŞİ EKLE</string>
     <string name="logIn">Giriş Yap</string>
-    <string name="please_login">Lütfen giriş yapınız.</string>
-    <string name="logout">ÇIKIŞ</string>
+    <string name="please_login">Gün içinde ilaç saatlerinize alarm kurabilmek için lütfen giriş yapınız.</string>
     <string name="age">Yaş : </string>
     <string name="weight">Kilo</string>
     <string name="height">Boy</string>
     <string name="gender">Cinsiyet : </string>
     <string name="next">İLERİ</string>
-    <string name="addNew">Yeni Kişi Ekle</string>
-    <string name="add2">Ekle</string>
     <string name="medicine">İlaç ismi</string>
     <string name="repeat">Tekrar</string>
     <string name="monday">Her Pazartesi</string>
@@ -21,4 +18,7 @@
     <string name="friday">Her Cuma</string>
     <string name="sat">Her Cumartesi</string>
     <string name="sun">Her Pazar</string>
+    <string name="hello">UNUTMA</string>
+    <string name="coverLetter">Günün yoğunluğunda unutulan birçok şey varken bunlardan biri de sağlığınız olmasın.! Bu uygulama sizin yerinize sağlığınız için ilaç saatlerinizi size hatırlatır.</string>
+    <string name="welcome">HOŞ GELDİNİZ</string>
 </resources>

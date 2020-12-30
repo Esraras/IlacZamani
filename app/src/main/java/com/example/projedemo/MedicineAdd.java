@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-public class MedicineAdd extends AppCompatActivity {
+public class MedicineAdd extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
 
     ViewPager viewPager;
@@ -17,6 +17,22 @@ public class MedicineAdd extends AppCompatActivity {
 
         viewPager= findViewById(R.id.vpPager);
         viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
+
+        viewPager.addOnPageChangeListener(this);
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
 
     }
 }
