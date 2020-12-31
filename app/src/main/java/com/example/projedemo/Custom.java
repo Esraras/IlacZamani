@@ -41,9 +41,11 @@ public class Custom extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
+
         View view = inflater.inflate(R.layout.layout_once, container, false);
         TextView med = view.findViewById(R.id.tv_name);
         med.setText(medicineName);
+
         EditText emp = view.findViewById(R.id.et_med);
         emp.setText(medicine);
 
@@ -64,8 +66,6 @@ public class Custom extends Fragment {
                         break;
                     }
                 }
-
-
             }
         });
 

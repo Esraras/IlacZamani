@@ -20,7 +20,6 @@ public class Once extends Fragment {
     private Button sound;
 
     public static Once newInstance(String s) {
-
         Bundle args = new Bundle();
         args.putString("ilacI", medicineName);
         args.putString("ilac",medicine);
@@ -32,6 +31,7 @@ public class Once extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         medicineName = getArguments().getString("ilacI");
         medicine = getArguments().getString("ilac");
     }
@@ -40,13 +40,15 @@ public class Once extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
+
         View view = inflater.inflate(R.layout.layout_once, container, false);
         TextView med = view.findViewById(R.id.tv_name);
         med.setText(medicineName);
+
         EditText emp = view.findViewById(R.id.et_med);
         emp.setText(medicine);
 
-        Button button = (Button) view.findViewById(R.id.bt_sound);
+        Button button = view.findViewById(R.id.bt_sound);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +56,6 @@ public class Once extends Fragment {
                 startActivity(intent);
             }
         });
-
         return view;
     }
 }

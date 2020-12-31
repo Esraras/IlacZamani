@@ -5,8 +5,8 @@
     <string name="logIn">Giriş Yap</string>
     <string name="please_login">Gün içinde ilaç saatlerinize alarm kurabilmek için lütfen giriş yapınız.</string>
     <string name="age">Yaş : </string>
-    <string name="weight">Kilo</string>
-    <string name="height">Boy</string>
+    <string name="weight">Kilo : </string>
+    <string name="height">Boy : </string>
     <string name="gender">Cinsiyet : </string>
     <string name="next">İLERİ</string>
     <string name="medicine">İlaç ismi</string>
