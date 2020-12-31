@@ -3,8 +3,10 @@ package com.example.projedemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,9 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class Properties extends AppCompatActivity implements View.OnClickListener {
 
+
+   // SharedPreferences sharedPreferences = getSharedPreferences("Properties", MODE_PRIVATE);
+
     TextInputLayout name;
     TextInputLayout age;
     TextInputLayout weight;
@@ -26,6 +31,10 @@ public class Properties extends AppCompatActivity implements View.OnClickListene
     Button add;
     RadioGroup radioGroup;
     RadioButton woman, man;
+
+/*
+    SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+    SharedPreferences.Editor editor = sharedPref.edit();*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +56,7 @@ public class Properties extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
 
-        if (ifs() == true ){
+        if (ifs()){
 
             Intent intent = new Intent(getApplicationContext(), Sounds.class);
             startActivity(intent);
@@ -59,29 +68,22 @@ public class Properties extends AppCompatActivity implements View.OnClickListene
     }
 
     public boolean ifs(){
+
         radioGroup = findViewById(R.id.gender);
         int selectedID = radioGroup.getCheckedRadioButtonId();
         add = findViewById(selectedID);
 
         String ed_text = age.getEditText().getText().toString().trim();
-        if (isNumeric(ed_text)) {
+        if (!isNumeric(ed_text)) return false;
 
-        }else
-            return false;
         String ed_text1 = weight.getEditText().getText().toString().trim();
-        if (isNumeric(ed_text1)) {
+        if (isNumeric(ed_text1)) return false;
 
-        }else
-            return false;
         String ed_text2 = height.getEditText().getText().toString().trim();
-        if (isNumeric(ed_text2)) {
+        if (isNumeric(ed_text2)) return false;
 
-        }else
-            return false;
-        if (isValidName(name.getEditText().getText().toString())) {
+        if (isValidName(name.getEditText().getText().toString().trim())) return false;
 
-        }else
-            return false;
         return true;
     }
 
