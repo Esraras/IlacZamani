@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Custom extends Fragment {
+public class Custom extends Fragment implements View.OnClickListener {
 
     private static String medicineName;
     private static String medicine;
@@ -49,26 +49,23 @@ public class Custom extends Fragment {
         EditText emp = view.findViewById(R.id.et_med);
         emp.setText(medicine);
 
-        Button button = (Button) view.findViewById(R.id.bt_sound);
-        button.setOnClickListener(new View.OnClickListener() {
+        sound= (Button) view.findViewById(R.id.bt_sound);
+        repeat = (Button) view.findViewById(R.id.bt_repeat);
+        repeat.setOnClickListener(this);
+
+        sound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                switch (v.getId()){
-                    case R.id.bt_sound: {
-                        Intent intent = new Intent(getActivity(), Sounds.class);
-                        startActivity(intent);
-                        break;
-                    }
-                    case R.id.bt_repeat: {
-                        Intent intent = new Intent(getActivity(), Repeat.class);
-                        startActivity(intent);
-                        break;
-                    }
-                }
+                Intent intent = new Intent(getActivity(), Sounds.class);
+                startActivity(intent);
             }
         });
-
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(getActivity(), Repeat.class);
+        startActivity(intent);
     }
 }
