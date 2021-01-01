@@ -19,7 +19,8 @@
         android:textStyle="bold"
         android:layout_marginTop="30dp"
         android:textOff="OFF"
-        android:textOn="ON"/>
+        android:textOn="ON"
+        android:checked="true"/>
 
     <Switch
         android:id="@+id/sw22"
@@ -67,5 +68,18 @@
         android:layout_marginTop="30dp"
         android:textOff="OFF"
         android:textOn="ON"/>
+
+    <Button
+        android:id="@+id/bt_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/background"
+        android:gravity="left"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:text="Geri git"
+        android:textColor="@color/blue"
+        android:textSize="25dp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

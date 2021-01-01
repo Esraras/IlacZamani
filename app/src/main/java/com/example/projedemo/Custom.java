@@ -20,9 +20,15 @@ public class Custom extends Fragment implements View.OnClickListener {
     private Button sound, repeat;
 
     public static Custom newInstance(String s) {
-
         Bundle args = new Bundle();
-        args.putString("ilacI", medicineName);
+        args.putString("ilacI",medicineName);
+        Custom fragment = new Custom();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    public static Custom newInstance1(String s) {
+        Bundle args = new Bundle();
         args.putString("ilac",medicine);
         Custom fragment = new Custom();
         fragment.setArguments(args);
@@ -42,7 +48,7 @@ public class Custom extends Fragment implements View.OnClickListener {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
 
-        View view = inflater.inflate(R.layout.layout_once, container, false);
+        View view = inflater.inflate(R.layout.layout_custom, container, false);
         TextView med = view.findViewById(R.id.tv_name);
         med.setText(medicineName);
 

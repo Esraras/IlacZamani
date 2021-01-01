@@ -7,7 +7,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/logosaat"
         android:label="@string/hello"
-        android:roundIcon="@mipmap/logosaat_foreground"
+        android:roundIcon="@mipmap/logosaat_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjeDemo">
         <activity android:name=".Repeat" />
