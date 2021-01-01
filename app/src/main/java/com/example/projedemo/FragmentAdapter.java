@@ -25,10 +25,10 @@ public class FragmentAdapter extends FragmentPagerAdapter {
 
         switch (position){
             case 1: {
-                return Once.newInstance(section.get(position));
+                return Custom.newInstance(section.get(position));
             }
             default:{
-                return Custom.newInstance(section.get(position));
+                return Once.newInstance(section.get(position));
             }
         }
     }
