@@ -21,4 +21,9 @@
     <string name="hello">UNUTMA</string>
     <string name="coverLetter">Günün yoğunluğunda unutulan birçok şey varken bunlardan biri de sağlığınız olmasın.! Bu uygulama sizin yerinize sağlığınız için ilaç saatlerinizi size hatırlatır.</string>
     <string name="welcome">HOŞ GELDİNİZ</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="launch_main_activity">Launch Main Activity</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="channel_name">Simple Alarms</string>
 </resources>
