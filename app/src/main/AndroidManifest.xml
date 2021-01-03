@@ -14,6 +14,12 @@
         <activity android:name=".Sounds" />
         <activity android:name=".MedicineAdd" />
         <activity android:name=".Properties" />
+
+        <receiver android:name=".AlarmReceiver"/>
+        <service android:name=".RingtonePlayingService"
+            android:enabled="true">
+        </service>
+        
         <activity
             android:name=".MainActivity"
             android:label="@string/hello"
