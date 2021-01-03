@@ -6,7 +6,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logosaat"
-        android:label="@string/hello"
+        android:label="İlaç Zamanı"
         android:roundIcon="@mipmap/logosaat_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjeDemo">
@@ -22,7 +22,7 @@
         
         <activity
             android:name=".MainActivity"
-            android:label="@string/hello"
+            android:label="İlaç Zamanı"
             android:theme="@style/Theme.ProjeDemo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

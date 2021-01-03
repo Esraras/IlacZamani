@@ -46,20 +46,23 @@ public class MedicineAdd extends AppCompatActivity implements ViewPager.OnPageCh
         viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
         viewPager.addOnPageChangeListener(this);
 
+        final Calendar calendar = Calendar.getInstance();
+
+        final Intent my_intent = new Intent(this.context, AlarmReceiver.class);
+
+        alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
         close = (Button) findViewById(R.id.bt_close);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setAlarmText("Alarm kapatıldı.");
                 alarmManager.cancel(pendingIntent);
+
+                my_intent.putExtra("exrta","off");
+                sendBroadcast(my_intent);
             }
         });
-
-        alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-
-        final Calendar calendar = Calendar.getInstance();
-
-        final Intent intent = new Intent(this.context, AlarmReceiver.class);
 
         save = (Button) findViewById(R.id.bt_save);
         save.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +80,11 @@ public class MedicineAdd extends AppCompatActivity implements ViewPager.OnPageCh
                 String minuteString = String.valueOf(minute);
 
                 setAlarmText("Alarm kuruldu : " + hourString + ":" + minuteString);
-                pendingIntent = PendingIntent.getBroadcast(MedicineAdd.this,0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                my_intent.putExtra("extra","on");
+
+                pendingIntent = PendingIntent.getBroadcast(MedicineAdd.this,0, my_intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
                 alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
             }
         });

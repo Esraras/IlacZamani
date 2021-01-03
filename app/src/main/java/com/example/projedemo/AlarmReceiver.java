@@ -11,7 +11,12 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         Log.e("TAG", "oley");
 
+        String getYourString = intent.getExtras().getString("extra");
+        Log.e("what is the key?", getYourString);
+
         Intent service_intent = new Intent(context, RingtonePlayingService.class);
+        service_intent.putExtra("extra", getYourString);
+
         context.startService(service_intent);
     }
 }
