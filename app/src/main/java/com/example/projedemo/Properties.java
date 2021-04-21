@@ -58,7 +58,7 @@ public class Properties extends AppCompatActivity implements View.OnClickListene
 
         if (ifs()){
 
-            Intent intent = new Intent(getApplicationContext(), Sounds.class);
+            Intent intent = new Intent(getApplicationContext(), MedicineAdd.class);
             startActivity(intent);
 
             Toast.makeText(this, "Kişi başarıyla eklendi.", Toast.LENGTH_SHORT).show();

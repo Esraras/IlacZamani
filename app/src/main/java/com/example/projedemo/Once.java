@@ -49,12 +49,9 @@ public class Once extends Fragment {
         emp.setText(medicine);
 
         Button button = view.findViewById(R.id.bt_sound);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Sounds.class);
-                startActivity(intent);
-            }
+        button.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), Sounds.class);
+            startActivity(intent);
         });
         return view;
     }

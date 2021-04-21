@@ -39,20 +39,20 @@ public class RingtonePlayingService extends Service {
 
         switch (state) {
             case "on":
-                startId = 1;
+                this.startId = 1;
                 break;
             case "off":
-                startId = 0;
+                this.startId = 0;
                 break;
             default:
-                startId = 0;
+                this.startId = 0;
                 break;
         }
+        song = MediaPlayer.create(this, R.raw.daniel_simion);
 
-        isRunning = false;
-        if (!this.isRunning && startId == 1) {
+        isRunning = true;
+        if (!this.isRunning && this.startId == 1) {
 
-            song = MediaPlayer.create(this, R.raw.daniel_simion);
             song.start();
 
             this.isRunning = true;
@@ -64,28 +64,29 @@ public class RingtonePlayingService extends Service {
             PendingIntent pendingIntentAdd = PendingIntent.getActivity(this, 0, intentAdd, 0);
 
             Notification notification = new Notification.Builder(this)
-                    .setContentTitle("Alarm kapatılıyor")
+                    .setContentTitle("Alarm çalıyor")
                     .setContentText("DOKUN")
                     .setContentIntent(pendingIntentAdd)
                     .setAutoCancel(true)
+                    .setSmallIcon(R.drawable.hiad_play)
                     .build();
 
-            notificationManager.notify(0, notification);
+            notificationManager.notify(1, notification);
 
 
-        }else if (this.isRunning && startId == 0){
+        }else if (this.isRunning && this.startId == 0){
 
             song.stop();
             song.reset();
             this.isRunning = false;
             this.startId = 0;
 
-        }else if (!this.isRunning && startId == 0){
+        }else if (!this.isRunning && this.startId == 0){
 
             this.isRunning =false;
             this.startId = 0;
 
-        }else if (this.isRunning && startId == 1){
+        }else if (this.isRunning && this.startId == 1){
 
             this.isRunning = true;
             this.startId = 1;

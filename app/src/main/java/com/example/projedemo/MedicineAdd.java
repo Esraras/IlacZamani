@@ -31,6 +31,8 @@ public class MedicineAdd extends AppCompatActivity implements ViewPager.OnPageCh
     AlarmManager alarmManager;
     Context context;
     PendingIntent pendingIntent;
+    Calendar calendar;
+    Intent my_intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,9 +48,9 @@ public class MedicineAdd extends AppCompatActivity implements ViewPager.OnPageCh
         viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
         viewPager.addOnPageChangeListener(this);
 
-        final Calendar calendar = Calendar.getInstance();
+        calendar = Calendar.getInstance();
 
-        final Intent my_intent = new Intent(this.context, AlarmReceiver.class);
+        my_intent = new Intent(this.context, AlarmReceiver.class);
 
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
@@ -59,7 +61,7 @@ public class MedicineAdd extends AppCompatActivity implements ViewPager.OnPageCh
                 setAlarmText("Alarm kapatıldı.");
                 alarmManager.cancel(pendingIntent);
 
-                my_intent.putExtra("exrta","off");
+                my_intent.putExtra("extra","off");
                 sendBroadcast(my_intent);
             }
         });
