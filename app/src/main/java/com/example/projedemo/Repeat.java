@@ -75,7 +75,6 @@ public class Repeat extends AppCompatActivity {
                         if (sw7.isChecked());
                         break;
                     }
-                    default:
                 }
                 Intent intent = new Intent(getApplicationContext(), MedicineAdd.class);
                 startActivity(intent);

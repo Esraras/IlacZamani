@@ -27,7 +27,6 @@ import com.huawei.hms.support.hwid.service.HuaweiIdAuthService;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView loginDesc;
     Button loginButton;
     AuthHuaweiId huaweiAccount;
 
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         HwAds.init(this);
 
@@ -57,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         rootView.addView(topBannerView);
 
         loginButton = findViewById(R.id.login);
-        loginDesc = findViewById(R.id.userText);
         huaweiAccount = null;
 
         loginButton.setOnClickListener(new View.OnClickListener() {

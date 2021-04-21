@@ -15,8 +15,8 @@ public class FragmentAdapter extends FragmentPagerAdapter {
     public FragmentAdapter(@NonNull FragmentManager fm) {
         super(fm);
         section = new ArrayList<>();
-        section.add("Once");
-        section.add("Custom");
+        section.add("Bir kez");
+        section.add("Özel");
     }
 
     @NonNull

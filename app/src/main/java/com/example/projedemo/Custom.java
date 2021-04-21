@@ -22,19 +22,11 @@ public class Custom extends Fragment implements View.OnClickListener {
     public static Custom newInstance(String s) {
         Bundle args = new Bundle();
         args.putString("ilacI",medicineName);
-        Custom fragment = new Custom();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    public static Custom newInstance1(String s) {
-        Bundle args = new Bundle();
         args.putString("ilac",medicine);
         Custom fragment = new Custom();
         fragment.setArguments(args);
         return fragment;
     }
-
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,16 +47,13 @@ public class Custom extends Fragment implements View.OnClickListener {
         EditText emp = view.findViewById(R.id.et_med);
         emp.setText(medicine);
 
-        sound= (Button) view.findViewById(R.id.bt_sound);
         repeat = (Button) view.findViewById(R.id.bt_repeat);
         repeat.setOnClickListener(this);
 
-        sound.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Sounds.class);
-                startActivity(intent);
-            }
+        sound= (Button) view.findViewById(R.id.bt_sound);
+        sound.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), Sounds.class);
+            startActivity(intent);
         });
         return view;
     }
