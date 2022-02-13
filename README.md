@@ -1,2 +1,2 @@
-# İlaç ZAmanı
+# İlaç Zamanı
 Project for AppGallery.
