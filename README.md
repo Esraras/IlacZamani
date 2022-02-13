@@ -1,2 +1,2 @@
-# Remember 
+# İlaç ZAmanı
 Project for AppGallery.
