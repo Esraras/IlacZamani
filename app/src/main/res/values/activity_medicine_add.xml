@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="btnClose" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/blue2</item>
+        <item name="android:text">@string/closeAlarm</item>
+        <item name="android:backgroundTint">@color/background</item>
+        <item name="android:color">@color/black</item>
+
+    </style>
+    <style name="btnSave" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/blue2</item>
+        <item name="android:text">@string/saveAlarm</item>
+        <item name="android:backgroundTint">@color/background</item>
+    </style>
+
+
+</resources>

@@ -10,6 +10,7 @@ import android.media.RingtoneManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowMetrics;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -22,7 +23,6 @@ import androidx.viewpager.widget.ViewPager;
 import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
-
 public class MedicineAdd extends AppCompatActivity implements ViewPager.OnPageChangeListener {
     TimePicker timePicker;
     TextView textView;
@@ -110,4 +110,5 @@ public class MedicineAdd extends AppCompatActivity implements ViewPager.OnPageCh
     public void onPageScrollStateChanged(int state) {
 
     }
+
 }
